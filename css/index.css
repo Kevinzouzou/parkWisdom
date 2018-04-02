@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.topHeader{
+    width: 100rem;
+    height: 4.167rem;
+    background: #5F97F6;
+}
+.logo{
+    margin: 1.09rem 2.4rem;
+    display: inline-block;
+    width: 6.56rem;
+    height: 1.98rem;
+    background: url(../img/logo.png) no-repeat center center;
+    background-size: auto;
+}
+.topHeader .box{
+    border: 1px solid #fff;
+    display: inline-block;
+    height: 1.56rem;
+    margin: 1.3rem 0;
+}
+.topHeader .title{
+    margin: 1.35rem 2.29rem;
+    display: inline-block;
+    height: 1.458rem;
+    line-height: 1.458rem;
+    color: #fff;
+    font-size: 1.458rem;
+    vertical-align: top;
+}
+.topHeader .pull-right{
+    height: 100%;
+    font-size: 0.83rem;
+    color: #fff;
+}
+.topHeader .pull-right .btn{
+    font-size: 0.83rem;
+    margin: 1.145rem 1.4rem 1.145rem 0.37rem;
+    color: #fff;
+    background: transparent;
+    padding: 0.31rem 0.63rem;
+}
+.left_aside{
+    width: 11.5%;
+    background: #fcfcfc;
+}
+.right_aside{
+    width: 88.5%;
+    background: #ECEFF4;
+    padding: 1.56rem;
+}
+.left_aside .nav_tab{
+    margin-top: 3.125rem;
+    text-align: left;
+    font-size: 0.83rem;
+}
+.left_aside .nav_tab li>a{
+    display: inline-block;
+    color: #4f4f4f;
+    text-decoration: none;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    width: 100%;
+}
+.left_aside .nav_tab>li>a>i{
+    background: url(../img/icon-service.png) no-repeat left center;
+    background-size: 0.678rem 0.73rem;
+    width: 0.73rem;
+    height: 0.678rem;
+    display: inline-block;
+    margin-right: 0.625rem;
+    margin-left: 1.71rem;
+    vertical-align: middle;
+}
+.left_aside .nav_tab>.infoMg>a>i{background-image: url(../img/icon-info.png);}
+.left_aside .nav_tab>.addressBookMg>a>i{background-image: url(../img/icon-book.png);}
+.left_aside .nav_tab>.rightsMg>a>i{background-image: url(../img/icon-rights.png);}
+.left_aside .nav_tab>li>a>span.pull-right{
+    margin-right: 0.8rem;
+    margin-top: 1.17rem;
+    color: #757575;
+}
+
+.left_aside .nav_tab>li>a>span{
+    transition: all 0.3s linear;
+}
+
+.left_aside .nav_tab>li>ul li.active a{color: #5f97f6;}
+.left_aside .nav_tab>li>ul li a b{
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    margin-right: 0.885rem;
+    margin-left: 1.875rem;
+    vertical-align: middle;
+    background: #757575;
+}
+.left_aside .nav_tab>li>ul li.active a b{background: #5f97f6;}
+
