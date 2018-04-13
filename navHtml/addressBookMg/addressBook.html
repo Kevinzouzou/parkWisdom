@@ -1,3 +1,172 @@
 <!--通讯录-->
-通讯录
-通讯录
+<div class="lines firstTitle">
+    <span class="title">通讯录</span>
+    <span>（企业组织架构和人员名单）</span>
+    <div class="pull-right">
+        <button class='btn btn-primary text-center'>添加成员</button>
+    </div>
+</div>
+<div class="clearfix">
+    <ul id="tree" class="ztree pull-left"></ul>
+    <div class="tables pull-left addressTables">
+        <!--留白区域-->
+        <div class="firstAfter"></div>
+        <table class="table table-noneBorder">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>职务</th>
+                <th>部门</th>
+                <th>手机号码</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>李白白</td>
+                    <td>维修工程师</td>
+                    <td>水电维修组</td>
+                    <td>13123566566</td>
+                    <td>
+                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages"></div>
+    </div>
+    <!--删除 模态框-->
+    <div class="modal fade delete" id="bookDelete" aria-hidden="true">
+        <div class="modal-dialog" style="margin-top: 17rem;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title text-center">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-unstyled text-center">
+                        <li></li>
+                        <li>确定删除该消息?</li>
+                    </ul>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn delete" data-dismiss="modal">删除</button>
+                    <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/addressBookMg/addressBookMg.js"></script>
+<SCRIPT type="text/javascript" >
+    var zTree;
+    var setting = {
+        view: {
+            dblClickExpand: false,
+            showLine: true,
+            selectedMulti: false
+        },
+        edit: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable:true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+        callback: {
+            beforeClick: function(treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("tree");
+                if (treeNode.isParent) {
+                    zTree.expandNode(treeNode);
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            beforeRename: function(treeId, treeNode, newName, isCancel){
+                if(newName.length==0){
+                    alert("节点不能为空。");
+                    return false;
+                }
+                return true;
+            }
+        }
+    };
+
+    var zNodes =[
+        {id:1, pId:0, name:"企业通讯录", open:true},
+        {id:101, pId:1, name:"总裁办"},
+        {id:102, pId:1, name:"营销部"},
+        {id:103, pId:1, name:"产品部"},
+        {id:104, pId:1, name:"技术部"},
+        {id:105, pId:1, name:"设计部"},
+        {id:106, pId:1, name:"市场部"},
+        {id:107, pId:1, name:"维修部"},
+        {id:108, pId:1, name:"行政部"},
+
+        {id:10701, pId:107, name:"水电维修组"},
+        {id:10702, pId:107, name:"电梯维修组"},
+        {id:10703, pId:107, name:"土木维修组"}
+    ];
+
+    $(document).ready(function(){
+        var t = $("#tree");
+        t = $.fn.zTree.init(t, setting, zNodes);
+    });
+</SCRIPT>

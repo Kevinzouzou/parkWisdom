@@ -49,12 +49,17 @@ a{
 }
 .left_aside{
     width: 11.5%;
-    background: #fcfcfc;
+    background: #fff;
 }
 .right_aside{
     width: 88.5%;
     background: #ECEFF4;
     padding: 1.56rem;
+    font-size: 0.83rem;
+}
+.right_aside>.tab-content{
+    height: 100%;
+    background: #fff;
 }
 .left_aside .nav_tab{
     margin-top: 3.125rem;
@@ -104,4 +109,400 @@ a{
     background: #757575;
 }
 .left_aside .nav_tab>li>ul li.active a b{background: #5f97f6;}
+.table-noneBorder>thead>tr>th,.table-noneBorder>tbody>tr>td{
+    border: 0;
+}
+.table>thead>tr{height: 4.17rem;}
+.table>tbody>tr{height: 3.125rem;}
+.table>thead>tr>th,.table>tbody>tr>td{
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-default{border-color: #cbcbcb;}
+.btn-primary{background: #5f97f6;border-color: #5f97f6;}
+.noAsk{background: #fff;}
+.askOf{background: #f59523;}
+.askBy{background: #eb606a;}
+.table tr .notDone{color: #eb606a;}
+.table tr .done,.lines .tabs{color: #17c295;}
+.table tr .affairLeave{color: #fff;background: #eb606a;}
+.table tr .sickLeave{color: #fff;background: #f59523;}
+.tab-content .firstTitle{
+    height: 5.2rem;
+    line-height: 5.2rem;
+}
+.tab-content .firstTitle:first-child{
+   border-bottom: 1px solid #e3e3e3;
+}
+.firstTitle button:first-child{
+    margin-left: 2.08rem;
+}
+.tab-content .secondTitle{
+    height: 2.55rem;
+    line-height: 2.55rem;
+}
+.tab-content .firstAfter{height: 1.77rem;}
+.firstTitle .title{
+    margin-left: 2.08rem;
+    font-size: 1.25rem;
+    color: #4a4a4a;
+}
+.firstTitle .pull-right input{
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 1px 0.94rem;
+    width: 13.54rem;
+    border: 1px solid #cdcdcd;
+}
+.lines .btn{
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 0 1.25rem;
+    font-size: 0.83rem;
+    margin: 0 0.26rem;
+    border-radius: 2px;
+}
+.firstTitle .pull-right button{
+    margin-right: 2.08rem;
+}
+.tables{padding: 0 2.08rem;}
+.tab-content .table tr td a{
+    margin: 0 0.52rem;
+    padding: 0.42rem 0.26rem;
+    text-decoration: none;
+    color: #5f97f6;
+}
+.tab-content .table tr td span{
+    margin: 0 0.83rem;
+    padding: 0.42rem 0.26rem;
+    color: #cbcbcb;
+}
+.firstTitle .dropdown{
+    display: inline-block;
+    margin: 0 0.52rem;
+    border: 1px solid #cdcdcd;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    border-radius: 2px;
+    width: 7.81rem;
+}
+.firstTitle .dropdown>a{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 0 0.52rem 0 0.94rem;
+    color: #333;
+}
+.firstTitle .dropdown>a .caret{
+    float: right;
+    margin-top: 0.94rem;
+}
+.firstTitle .dropdown>ul{
+    width: 100%;
+    min-width: 7.81rem;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+}
+.firstTitle .dropdown>ul li:hover a{
+    color: #fff;
+    background: #5F97F6;
+}
+.lines .timesComponent{
+    display: inline-block;
+    margin-left: 3.125rem;
+    height: 5.2rem;
+    line-height: 5.2rem;
+}
+.lines .timesComponent input{
+    width: 7.81rem;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 0 0.52rem 0 2rem;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+}
+.lines .timesComponent i{
+    color: #9b9b9b;
+    position: relative;
+    left: 2.3rem;
+    vertical-align: text-bottom;
+    font-size: 1.04rem;
+}
+.lines .timesComponent b{
+    border: 1.5px solid #757575;
+    height: 0;
+    display: inline-block;
+    width: 0.83rem;
+    vertical-align: middle;
+}
+.secondTitle span{margin-right: 1.04rem;}
+.secondTitle span.tabs{margin-right: 0;}
+.secondTitle span:first-child{
+    margin-right: 0;
+    margin-left: 2.08rem;
+}
+.lines .pull-right i{
+    display: inline-block;
+    width: 2.6rem;
+    height: 1.25rem;
+    border: 1px solid #cbcbcb;
+    vertical-align: middle;
+    background: #fff;
+    margin-right: 0.26rem;
+}
+.lines .pull-right .askOf{background: #f59523;}
+.lines .pull-right .askBy{background: #eb606a;}
+.lines .pull-right span:last-child{margin-right: 2.8rem;}
+.table-bordered>thead>tr>th{background: #f4f4f4;}
+.proDetails hr{
+    margin: 0;
+    border-color: #e3e3e3;
+}
+.proDetails .detail{
+    height: 36rem;
+    overflow: auto;
+    padding: 0 2.08rem 2.08rem;
+    font-family: PingFangSC-Semibold;
+}
+.proDetails .detail ul li{margin: 4px 0;}
+.proDetails .detail ul b{
+    width: 8.9rem;
+    text-align: right;
+    display: inline-block;
+}
+.proDetails .detail ul .caption b{
+   vertical-align: top;
+}
+.proDetails .detail ul .caption .imgs{
+    display: inline-block;
+    width: 88%;
+}
+.proDetails .detail ul .caption span{
+    display: inline-block;
+    width: 14.06rem;
+    height: 14.06rem;
+    margin-right: 1.04rem;
+    background-size: 14.06rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.proDetails .detail .toAssign button{
+    margin-left: 9rem;
+    margin-top: 1rem;
+}
+.proDetails .detail .assigned{margin-top: 1.82rem;}
+.proDetails .detail .assigned hr{
+    width: 89.74%;
+    margin: 0 auto;
+    border-color: #d8d8d8;
+}
+.proDetails .detail .assigned ul{margin-top: 1.3rem;}
+.taskAssigned .modal-content{margin-top: 15rem;}
+.modal-header,.modal-footer{border: 0;}
+.taskAssigned .modal-body dl{
+    margin-bottom: 0;
+}
+.taskAssigned .modal-body dt{
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: 2.6rem auto 1.67rem;
+    background: url(../img/icon-ok.png) no-repeat center center;
+    background-size: 5.2rem;
+}
+.taskAssigned .modal-footer button,.modal-footer button{
+    width: 7.8rem;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    margin: 0 5px;
+}
+.taskAssigned .modal-body dd.deter{
+    text-align: right;
+    margin-top: 1.5625rem;
+}
+.taskAssigned .modal-body .deter hr{
+    margin: 0 0 0.78rem -3%;
+    border: 0.5px solid #e7e7e7;
+    width: 106%;
+}
+.taskAssigned .modal-body .deter button{
+    width: 7.8rem;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    margin: 0 5px;
+}
+.taskAssigned .modal-body ul{
+    font-size: 0.93rem;
+    margin-top: 1.98rem;
+    margin-bottom: 2.08rem;
+}
+.taskAssigned .modal-body ul li{
+    margin: 1.04rem 0;
+}
+.taskAssigned .modal-body ul li span{
+    font-weight: 600;
+    width: 7.13rem;
+    text-align: right;
+    display: inline-block;
+    margin-right: 0.67rem;
+}
+.taskAssigned .modal-body ul li .property{
+    display: inline-block;
+    width: 13.54rem;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid #cbcbcb;
+}
+.taskAssigned .modal-body ul li .property a{
+    color: #333;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+.taskAssigned .modal-body ul li .property a span{
+    text-align: center;
+    display: inline;
+    font-weight: normal;
+}
+.taskAssigned .modal-body ul li .property .dropdown-menu{
+    margin: 2px 0 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+}
+.taskAssigned .modal-body ul li .property .dropdown-menu li{
+    margin: 0;
+}
+.taskAssigned .modal-body ul li .property .dropdown-menu li:hover a{
+    color: #fff;
+    background: #5F97F6;
+}
+.taskAssigned .modal-body ul li .searchs,
+.taskAssigned .modal-body ul li .choiced{
+    display: inline-block;
+}
+.taskAssigned .modal-body ul .searchs input{
+    width: 13.54rem;
+    height: 2.08rem;
+    line-height: 2.08rem;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid #cbcbcb;
+    padding: 1px 0.78rem;
+    margin-right: 0.52rem;
+}
+.taskAssigned .modal-body ul .searchs button{
+    height: 2.08rem;
+    line-height: 2.08rem;
+    padding: 0 1.25rem;
+    font-size: 0.83rem;
+}
+.taskAssigned .modal-body ul li .choiced a{
+    padding: 0.26rem 0.52rem;
+    text-decoration: none;
+}.taskAssigned .modal-body ul li .choiced span{
+     display: inline;
+}
+.taskAssigned dl,.proDetails,.proDetails .assigned{display: none;}
+.ztree{
+    width: 20%;
+    overflow: auto;
+    padding: 1.77rem 0.52rem 0.26rem 2.83rem;
+    border-right: 1px solid #e3e3e3;
+}
+.ztree li a{height: 1.72rem;}
+.ztree *{font-size: 0.93rem;}
+/*.ztree li span.button{width: 0;}*/
+.addressTables{width: 80%;}
+
+.pages{text-align: center;}
+.pages .pagination{
+    display: inline-block;
+    margin: 0.52rem 0;
+}
+.pages>.pagination span{
+    color: #757575;
+    margin: 0 0.26rem;
+    vertical-align: text-bottom;
+    font-weight: bold;
+}
+.pages>.pagination .active{
+    vertical-align: baseline;
+    font-weight: normal;
+}
+.pages .pagination .active,.pages>.pagination>a{
+    display: inline-block;
+    width: 1.56rem;
+    height: 1.56rem;
+    line-height: 30px;
+    background: #5f97f6;
+    color: #fff;
+    border-radius: 2px;
+    margin: 0 0.26rem;
+    text-align: center;
+}
+.pages>.pagination>a{
+    text-decoration: none;
+    color: #757575;
+    background: #fff;
+}
+.pages>.pagination>a:hover{
+    color: #fff;
+    background: #5f97f6;
+}
+.pages .pagination .jump{
+    display: inline-block;
+    height: 1.56rem;
+    line-height: 1.56rem;
+    padding: 0 0.5rem;
+    font-size: 0.83rem;
+    color: #fff;
+    background: #5f97f6;
+    width: 4rem;
+}
+.pages .pagination-detail{display: inline-block;}
+.pages .pagination-detail span,.pages .pagination input,.pages .pagination .jump{
+    margin: 0 0.26rem;
+}
+.pages .pagination input{
+    width: 3.13rem;
+    height: 1.56rem;
+    line-height: 1.56rem;
+    padding: 1px 2px;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+}
+
+.pages .pagination-detail button{
+    height: 1.56rem;
+    line-height: 1.56rem;
+    padding: 0 0.5rem;
+    font-size: 0.83rem;
+}
+.modal .modal-header,.modal .modal-footer{border: 1px solid #e7e7e7;}
+.delete .modal-body ul{
+    margin: 0;
+    padding: 2.23rem 0 1.67rem;
+    font-size: 0.94rem;
+}
+.delete .modal-body ul li:first-child{
+    width: 4.17rem;
+    height: 4.17rem;
+    margin: 0 auto 1.04rem;
+    border-radius: 50%;
+    background: url(../img/icon-delete.png) no-repeat center center;
+    background-size: 100%;
+}
 

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/zTreeStyle.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="css/before.css"/>-->
     <link rel="stylesheet" href="css/index.css"/>
 
@@ -48,9 +49,9 @@
                 <i></i><span>信息管理</span><span class="pull-right glyphicon glyphicon-menu-down"></span>
             </a>
             <ul class="collapse tablist_second" id="infoMg_menu">
-                <li class="schedulInfo active"><a role="tab" data-toggle="tab" href="#tab_schedulInfo"><b></b>排班信息管理</a></li>
-                <li class="patrolInfo"><a role="tab" data-toggle="tab" href="#tab_patrolInfo"><b></b>巡逻信息管理</a></li>
-                <li class="clockInfo"><a role="tab" data-toggle="tab" href="#tab_clockInfo"><b></b>打卡信息管理</a></li>
+                <!--<li class="schedulInfo active"><a role="tab" data-toggle="tab" href="#tab_schedulInfo"><b></b>排班信息管理</a></li>-->
+                <!--<li class="patrolInfo"><a role="tab" data-toggle="tab" href="#tab_patrolInfo"><b></b>巡逻信息管理</a></li>-->
+                <li class="clockInfo active"><a role="tab" data-toggle="tab" href="#tab_clockInfo"><b></b>打卡信息管理</a></li>
                 <li class="forInfo"><a role="tab" data-toggle="tab" href="#tab_forInfo"><b></b>请假信息管理</a></li>
                 <li class="businessInfo"><a role="tab" data-toggle="tab" href="#tab_businessInfo"><b></b>出差信息管理</a></li>
             </ul>
@@ -88,12 +89,12 @@
         <!--信息管理-->
         <div class="tab-pane" id="tab_infoMg">
             <div class="tab-content">
-                <!--排班信息管理-->
-                <div class="tab-pane active" id="tab_schedulInfo">排班信息管理</div>
-                <!--巡逻信息管理-->
-                <div class="tab-pane" id="tab_patrolInfo">巡逻信息管理</div>
+                <!--&lt;!&ndash;排班信息管理&ndash;&gt;-->
+                <!--<div class="tab-pane active" id="tab_schedulInfo">排班信息管理</div>-->
+                <!--&lt;!&ndash;巡逻信息管理&ndash;&gt;-->
+                <!--<div class="tab-pane" id="tab_patrolInfo">巡逻信息管理</div>-->
                 <!--打卡信息管理-->
-                <div class="tab-pane" id="tab_clockInfo">打卡信息管理</div>
+                <div class="tab-pane active" id="tab_clockInfo">打卡信息管理</div>
                 <!--请假信息管理-->
                 <div class="tab-pane" id="tab_forInfo">请假信息管理</div>
                 <!--出差信息管理-->
@@ -131,11 +132,15 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.twbsPagination.js"></script>
+<script src="js/jquery.pagination.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 <!--<script src="js/before.js"></script>-->
 <!--<script src="js/public.js"></script>-->
 <script src="js/tools.js"></script>
+<script src="js/jquery.ztree.core.js"></script>
 <script src="js/index.js"></script>
+<script src="js/proSerMg/serMg.js"></script>
+<script src="js/infoMg/infoMg.js"></script>
 </body>
 </html>

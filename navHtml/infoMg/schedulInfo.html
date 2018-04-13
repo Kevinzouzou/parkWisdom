@@ -1,3 +1,98 @@
 <!--排班信息管理-->
-排班信息管理
-排班信息管理
+<div class="lines firstTitle">
+    <span class="title">排班信息管理</span>
+    <span>（查看人员排班信息）</span>
+    <div class="pull-right">
+        <span>选择部门</span>
+        <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown"><span>安保部</span><b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a>研发部</a></li>
+                <li><a>采购部</a></li>
+                <li><a>人事部</a></li>
+            </ul>
+        </div>
+        <input type="text" placeholder="报修人、联系方式搜索"/>
+        <button class='btn btn-primary text-center'>搜索</button>
+    </div>
+</div>
+<div class="lines firstTitle">
+    <button class='btn btn-primary text-center'>周排班表</button>
+    <button class='btn btn-default text-center'>周排班表</button>
+    <div class="timesComponent">
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" placeholder="开始时间"/>
+        <b></b>
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" placeholder="结束时间"/>
+        <button class="btn btn-primary text-center">筛选</button>
+    </div>
+</div>
+<div class="lines secondTitle">
+    <span>班次说明：</span>
+    <span class="tabs">长白班</span><span>（06:00-22:00）</span>
+    <span class="tabs">白班</span><span>（09:00-18:00）</span>
+    <span class="tabs">早班</span><span>（08:00-12:00）</span>
+    <span class="tabs">晚班</span><span>（13:00-18:00）</span>
+    <div class="pull-right">
+        <i class="noAsk"></i>
+        <span>无请假信息</span>
+        <i class="askOf"></i>
+        <span>请假审批中</span>
+        <i class="askBy"></i>
+        <span>请假审批通过</span>
+    </div>
+</div>
+<!--列表-->
+<div class="tables">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>岗位</th>
+            <th>11-06（一）</th>
+            <th>11-07（二）</th>
+            <th>11-08（三）</th>
+            <th>11-09（四）</th>
+            <th>11-10（五）</th>
+            <th>11-11（六）</th>
+            <th>11-12（日）</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>李白白</td>
+            <td>保安</td>
+            <td class="done">长白班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">晚班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">长白班</td>
+        </tr>
+        <tr>
+            <td>李白白</td>
+            <td>保安</td>
+            <td class="done">长白班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">长白班</td>
+            <td class="affairLeave">事假</td>
+        </tr>
+        <tr>
+            <td>李白白</td>
+            <td>保安</td>
+            <td class="done">长白班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="sickLeave">病假</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">长白班</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

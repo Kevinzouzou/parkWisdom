@@ -1,3 +1,76 @@
 <!--请假信息管理-->
-请假信息管理
-请假信息管理
+<div class="lines firstTitle">
+    <span class="title">请假信息管理</span>
+    <span>（查看人员请假信息）</span>
+</div>
+<div class="lines firstTitle">
+    <button class='btn btn-primary text-center dayApply'>当日申请</button>
+    <button class='btn btn-default text-center monthApply'>月请假表</button>
+    <div class="timesComponent">
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" class="calendar startTime" placeholder="开始时间"/>
+        <b></b>
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" class="calendar endTime" placeholder="结束时间"/>
+        <button class="btn btn-primary text-center screening">筛选</button>
+    </div>
+</div>
+<div class="lines secondTitle">
+    <span>当日请假数据 <b class="askings">3</b> 条</span>
+</div>
+<!--列表-->
+<div class="tables">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>职位</th>
+                <th>请假类型</th>
+                <th>开始时间</th>
+                <th>结束时间</th>
+                <th>时长</th>
+                <th>提交日期</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>李白白</td>
+                <td>安保部</td>
+                <td>病假</td>
+                <td>2017.11.12 上午</td>
+                <td>2017.11.13 下午</td>
+                <td>2天</td>
+                <td>2017.11.11</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>张白白</td>
+                <td>市场部</td>
+                <td>事假</td>
+                <td>2017.12.12 上午</td>
+                <td>2017.12.13 下午</td>
+                <td>2天</td>
+                <td>2017.12.11</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>江小白</td>
+                <td>文秘部</td>
+                <td>调休假</td>
+                <td>2017.11.10 上午</td>
+                <td>2017.11.11 下午</td>
+                <td>2天</td>
+                <td>2017.11.09</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pages"></div>
+</div>

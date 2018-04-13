@@ -1,3 +1,68 @@
 <!--巡逻信息管理-->
-巡逻信息管理
-巡逻信息管理
+<div class="lines firstTitle">
+    <span class="title">巡逻信息管理</span>
+    <div class="pull-right">
+        <input type="text" placeholder="报修人、联系方式搜索"/>
+        <button class='btn btn-primary text-center'>搜索</button>
+    </div>
+</div>
+<div class="lines firstTitle">
+    <button class='btn btn-primary text-center'>周巡逻</button>
+    <button class='btn btn-default text-center'>月巡逻</button>
+    <div class="timesComponent">
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" placeholder="开始时间"/>
+        <b></b>
+        <i class="glyphicon glyphicon-calendar"></i>
+        <input type="text" placeholder="结束时间"/>
+        <button class="btn btn-primary text-center">筛选</button>
+    </div>
+    <div class="pull-right">
+        <i class="noAsk"></i>
+        <span>正常</span>
+        <i class="askBy"></i>
+        <span>异常</span>
+    </div>
+</div>
+<!--列表-->
+<div class="tables">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>岗位</th>
+            <th>11-06（一）</th>
+            <th>11-07（二）</th>
+            <th>11-08（三）</th>
+            <th>11-09（四）</th>
+            <th>11-10（五）</th>
+            <th>11-11（六）</th>
+            <th>11-12（日）</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>李白白</td>
+            <td>保安</td>
+            <td class="done">长白班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">晚班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">长白班</td>
+        </tr>
+        <tr>
+            <td>李白白</td>
+            <td>保安</td>
+            <td class="done">长白班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="notDone">休息</td>
+            <td class="done">晚班</td>
+            <td class="done">长白班</td>
+            <td class="affairLeave">事假</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

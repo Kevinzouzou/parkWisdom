@@ -1,162 +1,186 @@
 <!--报修管理-->
-<div class="lines">
-    <span class="title">报修管理</span>
-    <div class="pull-right">
-        <input type="text" placeholder="报修人、联系方式搜索"/>
-        <button class='btn btn-primary text-center'>搜索</button>
+<div class="zTab">
+    <div class="lines firstTitle">
+        <span class="title">报修管理</span>
+        <div class="pull-right">
+            <input type="number" placeholder="联系方式搜索"/>
+            <button class='btn btn-primary text-center search'>搜索</button>
+        </div>
+    </div>
+    <!--留白区域-->
+    <div class="firstAfter"></div>
+    <!--列表-->
+    <div class="tables">
+        <table class="table table-noneBorder">
+            <thead>
+            <tr>
+                <th>报修人</th>
+                <th>联系方式</th>
+                <th>报修类别</th>
+                <th>报修点</th>
+                <th>报修时间</th>
+                <th>期望处理时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>李白白</td>
+                <td>15815856655</td>
+                <td>弱电类</td>
+                <td>科技大厦二栋4楼F</td>
+                <td>10.24 14:42</td>
+                <td>10.24 16:00-17:00</td>
+                <td>未解决</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#detailSerMg">详情</a>
+                    <a class="send" data-toggle="modal" data-target="#taskAssigned">任务指派</a>
+                </td>
+            </tr>
+            <tr>
+                <td>李白白</td>
+                <td>15815856655</td>
+                <td>弱电类</td>
+                <td>科技大厦二栋4楼F</td>
+                <td>10.24 14:42</td>
+                <td>10.24 16:00-17:00</td>
+                <td>已解决</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#detailSerMg">详情</a>
+                    <a class="send" data-toggle="modal" data-target="#taskAssigned">任务指派</a>
+                </td>
+            </tr>
+            <tr>
+                <td>李白白</td>
+                <td>15815856655</td>
+                <td>弱电类</td>
+                <td>科技大厦二栋4楼F</td>
+                <td>10.24 14:42</td>
+                <td>10.24 16:00-17:00</td>
+                <td>未解决</td>
+                <td>
+                    <a class="detail" data-toggle="modal" data-target="#detailSerMg">详情</a>
+                    <span>已指派</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="pages"></div>
+    </div>
+</div>
+<!--报修详情-->
+<div class="proDetails">
+    <div class="lines firstTitle">
+        <span class="title">报修详情</span>
+        <div class="pull-right">
+            <button class='btn btn-primary text-center return'>返回</button>
+        </div>
+    </div>
+    <hr/>
+    <!--留白区域-->
+    <div class="firstAfter"></div>
+    <div class="detail">
+        <ul class="list-unstyled">
+            <li class="nickName">
+                <b>报修人：</b>
+                <span>李白白</span>
+            </li>
+            <li class="cellPhone">
+                <b>联系方式：</b>
+                <span>13312342356</span>
+            </li>
+            <li class="proType">
+                <b>报修类别：</b>
+                <span>弱电类</span>
+            </li>
+            <li class="coordinate">
+                <b>报修点：</b>
+                <span>科技大厦2栋4楼F</span>
+            </li>
+            <li class="proTime">
+                <b>报修时间：</b>
+                <span>10.24 14:42</span>
+            </li>
+            <li class="dealTime">
+                <b>期望处理时间：</b>
+                <span>10.24 16:00-17:00</span>
+            </li>
+            <li class="remark">
+                <b>描述：</b>
+                <span>前台灯一直闪烁，只能关闭，希望尽快处理，不然太黑了。</span>
+            </li>
+            <li class="caption">
+                <b>图片说明：</b>
+                <div class="imgs">
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+        <div class="toAssign">
+            <button class="btn btn-primary text-center send" data-toggle="modal" data-target="#taskAssigned">任务指派</button>
+        </div>
+        <div class="assigned">
+            <hr/>
+            <ul class="list-unstyled">
+                <!--<li>-->
+                    <!--<b>指派人：</b>-->
+                    <!--<span>李冬梅</span>-->
+                <!--</li>-->
+                <li class="propertyName">
+                    <b>指派对象：</b>
+                    <span>田晓光</span>
+                </li>
+                <li class="dTime">
+                    <b>指派时间：</b>
+                    <span>10.24 15:42</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<!--列表-->
-<div class="tables">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>来访时间</th>
-            <th>预计拜访时间(小时)</th>
-            <th>来访人姓名</th>
-            <th>证件类型</th>
-            <th>证件号码</th>
-            <th>人数</th>
-            <th>来访事由</th>
-            <th>来访地址</th>
-            <th>备注</th>
-            <th>操作</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
-<!--添加 模态框-->
-<div class="modal fade" id="addVisitor" aria-hidden="true">
-    <div class="modal-dialog" style="margin-top: 8rem">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title text-center" id="complaintsModalLabel">添加</h4>
-            </div>
-            <div class="modal-body">
-                <ul class="list-unstyled clearfix large-half">
-                    <li>
-                        <span>来访时间</span>
-                        <input type="text" class="calendar startTime"/>
-                    </li>
-                    <li class="text-right">
-                        <span>预计拜访</span>
-                        <input type="text" class="visitTime" placeholder="单位：小时"/>
-                    </li>
-                    <li>
-                        <span>来&nbsp;&nbsp;访&nbsp;&nbsp;人</span>
-                        <input type="text" class="vName" placeholder="来访人姓名"/>
-                    </li>
-                    <li class="text-right">
-                        <span>证件类型</span>
-                        <div class="dropdown areaZone certificateName">
-                            <a class="dropdown-toggle areaZoneList text-center" data-toggle="dropdown" ids="1"><span>身份证</span><b class="caret"></b></a>
-                            <ul class="dropdown-menu areaZoneList-menu" role="menu"></ul>
-                        </div>
-                    </li>
-                    <li>
-                        <span>证件号码</span>
-                        <input type="text" class="certificateNo"/>
-                    </li>
-                    <li class="text-right">
-                        <span>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数</span>
-                        <input type="text" class="personNum"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>来访事由</span>
-                        <input type="text" class="reason"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>来访地址</span>
-                        <input type="text" class="address"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</span>
-                        <textarea class="marBotArea"></textarea>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn btn-warning btn-lg toResure" data-dismiss="modal">确定</button>
-                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">取消</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--修改 模态框-->
-<div class="modal fade" id="visitor_modify" aria-hidden="true">
-    <div class="modal-dialog" style="margin-top: 8rem">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title text-center">修改</h4>
-            </div>
-            <div class="modal-body">
-                <ul class="list-unstyled clearfix large-half">
-                    <li>
-                        <span>来访时间</span>
-                        <input type="text" class="calendar startTime"/>
-                    </li>
-                    <li class="text-right">
-                        <span>预计拜访</span>
-                        <input type="text" class="visitTime" placeholder="单位：小时"/>
-                    </li>
-                    <li>
-                        <span>来&nbsp;&nbsp;访&nbsp;&nbsp;人</span>
-                        <input type="text" class="vName" placeholder="来访人姓名"/>
-                    </li>
-                    <li class="text-right">
-                        <span>证件类型</span>
-                        <div class="dropdown areaZone certificateName">
-                            <a class="dropdown-toggle areaZoneList text-center" data-toggle="dropdown" ids="1"><span>身份证</span><b class="caret"></b></a>
-                            <ul class="dropdown-menu areaZoneList-menu" role="menu"></ul>
-                        </div>
-                    </li>
-                    <li>
-                        <span>证件号码</span>
-                        <input type="text" class="certificateNo"/>
-                    </li>
-                    <li class="text-right">
-                        <span>人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数</span>
-                        <input type="text" class="personNum"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>来访事由</span>
-                        <input type="text" class="reason"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>来访地址</span>
-                        <input type="text" class="address"/>
-                    </li>
-                    <li class="totalLength">
-                        <span>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</span>
-                        <textarea class="marBotArea"></textarea>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn btn-warning btn-lg toResure" data-dismiss="modal">确定</button>
-                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">取消</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--删除 模态框-->
-<div class="modal fade" id="visitor_delete" aria-hidden="true">
+
+<!--任务指派 模态框-->
+<div class="modal fade taskAssigned" id="taskAssigned" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title text-center">提示</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="removeDatas()">X</button>
+                <h4 class="modal-title text-center">任务指派</h4>
             </div>
             <div class="modal-body">
-                <form class="form-inline mBody_title text-center">确定删除该消息?</form>
+                <ul class="list-unstyled clearfix taskResend">
+                    <li>
+                        <span>指派对象</span>
+                        <div class="dropdown property">
+                            <a class="dropdown-toggle propertyTitle" data-toggle="dropdown"><span>请选择</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu property-menu" role="menu">
+                                <li><a>研发部门 张小三</a></li>
+                                <li><a>销售部门 李小四</a></li>
+                                <li><a>人事部门 王小五</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>已选对象</span>
+                        <div class="choiced">
+                            <div class="thePerson"></div>
+                        </div>
+                    </li>
+                </ul>
+                <dl class="text-center">
+                    <dt></dt>
+                    <dd>任务已成功指派给<span class="designated">李铁柱</span></dd>
+                    <dd class="deter">
+                        <hr/>
+                        <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+                    </dd>
+                </dl>
             </div>
             <div class="modal-footer text-center">
-                <button type="button" class="btn btn-warning btn-lg to_delete" data-dismiss="modal">删除</button>
-                <button type="button" class="btn btn-default btn-lg to_cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine">确定</button>
             </div>
         </div>
     </div>
