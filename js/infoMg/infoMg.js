@@ -77,20 +77,37 @@ function askingForAjax(data){
         success: function (data) {
             var html="";
             $.each(data.responseList,function(i,item){
-                html+='<tr><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
+                var datas={
+                  approverName:item.addInfo.approverName,
+                  copyToName:item.addInfo.copyToName,
+                  leaveType:item.addInfo.leaveType,
+                  applyInfo:item.addInfo.applyInfo
+                };
+                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
                     '<td>'+checknull(item.addInfo.leaveType)+'</td><td>'+checknull(item.startTime)+'</td>' +
                     '<td>'+checknull(item.endTime)+'</td><td>'+checknull(item.duration)+'</td><td>'+checknull(item.time)+'</td>' +
-                    '<td><a class="detail" data-toggle="modal" data-target="#">详情</a></td></tr>';
+                    '<td><a class="detail" data-toggle="modal" data-target="#askingFor">详情</a></td></tr>';
             });
             $("#tab_forInfo .tables tbody").html(html);
             $("#tab_forInfo .lines .askings").text(data.responseList.length);
-            tableForPages("#tab_forInfo",6);
+            tableForPages("#tab_forInfo",7);
+            //forInfoDetail();
         },
         error: function () {
             console.log("error！");
         }
     });
 }
+//请假详情
+$("body").on("click","#tab_forInfo .table td .detail",function(){
+    var datas=$(this).parents("tr").attr("datas");
+    datas=JSON.parse(datas);
+    var id="#askingFor";
+    $(id+" .approver span").text(datas.approverName);
+    $(id+" .copyTo span").text(datas.copyToName);
+    $(id+" .leaveType span").text(datas.leaveType);
+    $(id+" .applyInfo span").text(datas.applyInfo);
+});
 //当日请假
 $("body").on("click","#tab_forInfo .lines .dayApply",function(){
     var start=getNowFormatDate(new Date())+" 00:00:00";
@@ -98,6 +115,7 @@ $("body").on("click","#tab_forInfo .lines .dayApply",function(){
     var data="parkId="+parkId+"&type=请假"+"&startTime="+start+"&endTime=" + end;
     askingForAjax(data);
 });
+
 //月请假表
 $("body").on("click","#tab_forInfo .lines .monthApply",function(){
     var start=getNowFormatDate(getCurrentMonthFirst())+" 00:00:00";
@@ -130,20 +148,36 @@ function businessInfoAjax(data){
         success: function (data) {
             var html="";
             $.each(data.responseList,function(i,item){
-                html+='<tr><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
+                var datas={
+                    //approverName:item.addInfo.approverName,
+                    //copyToName:item.addInfo.copyToName,
+                    applyInfo:item.addInfo.applyInfo,
+                    address:item.addInfo.address
+                };
+                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
                     '<td>'+checknull(item.addInfo.address)+'</td><td>'+checknull(item.startTime)+'</td>' +
                     '<td>'+checknull(item.endTime)+'</td><td>'+checknull(item.duration)+'</td><td>'+checknull(item.time)+'</td>' +
-                    '<td><a class="detail" data-toggle="modal" data-target="#">详情</a></td></tr>';
+                    '<td><a class="detail" data-toggle="modal" data-target="#businessFor">详情</a></td></tr>';
             });
             $("#tab_businessInfo .tables tbody").html(html);
             $("#tab_businessInfo .lines .business").text(data.responseList.length);
-            tableForPages("#tab_businessInfo",6);
+            tableForPages("#tab_businessInfo",7);
         },
         error: function () {
             console.log("error！");
         }
     });
 }
+//出差详情
+$("body").on("click","#tab_businessInfo .table td .detail",function(){
+    var datas=$(this).parents("tr").attr("datas");
+    datas=JSON.parse(datas);
+    var id="#businessFor";
+    //$(id+" .approver span").text(datas.approverName);
+    //$(id+" .copyTo span").text(datas.copyToName);
+    $(id+" .address span").text(datas.address);
+    $(id+" .applyInfo span").text(datas.applyInfo);
+});
 //当日出差
 $("body").on("click","#tab_businessInfo .lines .dayBusiness",function(){
     var start=getNowFormatDate(new Date())+" 00:00:00";

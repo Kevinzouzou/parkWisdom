@@ -3,7 +3,7 @@
     <span class="title">通讯录</span>
     <span>（企业组织架构和人员名单）</span>
     <div class="pull-right">
-        <button class='btn btn-primary text-center'>添加成员</button>
+        <button class='btn btn-primary text-center addMembers' data-toggle="modal" data-target="#memAdd">添加成员</button>
     </div>
 </div>
 <div class="clearfix">
@@ -28,7 +28,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -38,7 +38,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -48,7 +48,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -58,7 +58,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -68,7 +68,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
                     <td>水电维修组</td>
                     <td>13123566566</td>
                     <td>
-                        <a class="transfer" data-toggle="modal" data-target="#">转移成员</a>
+                        <a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>
                         <a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a>
                     </td>
                 </tr>
@@ -88,7 +88,7 @@
     </div>
     <!--删除 模态框-->
     <div class="modal fade delete" id="bookDelete" aria-hidden="true">
-        <div class="modal-dialog" style="margin-top: 17rem;">
+        <div class="modal-dialog marTop17">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
@@ -101,8 +101,70 @@
                     </ul>
                 </div>
                 <div class="modal-footer text-center">
-                    <button type="button" class="btn delete" data-dismiss="modal">删除</button>
                     <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn delete" data-dismiss="modal">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--转移成员 模态框-->
+    <div class="modal fade menTransfer" id="memTransfer" aria-hidden="true">
+        <div class="modal-dialog marTop17">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title text-center">转移成员</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-unstyled clearfix text-center ulText transfer">
+                        <li class="department">
+                            <span>转移部门</span>
+                            <input type="text" placeholder="输入需要转入的部门"/>
+                        </li>
+                        <li class="position">
+                            <span>转移职务</span>
+                            <input type="text" placeholder="输入需要转向的职务"/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--添加成员 模态框-->
+    <div class="modal fade menAdd" id="memAdd" aria-hidden="true">
+        <div class="modal-dialog marTop17">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title text-center">添加成员</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-unstyled clearfix text-center ulText adds">
+                        <li class="name">
+                            <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                            <input type="text" placeholder="输入姓名"/>
+                        </li>
+                        <li class="position">
+                            <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</span>
+                            <input type="text" placeholder="输入添加的职务"/>
+                        </li>
+                        <li class="department">
+                            <span>部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门</span>
+                            <input type="text" placeholder="输入添加的部门"/>
+                        </li>
+                        <li class="phone">
+                            <span>手机号码</span>
+                            <input type="text" placeholder="输入手机号码"/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn determine" data-dismiss="modal">确定</button>
                 </div>
             </div>
         </div>

@@ -56,7 +56,7 @@
             <td>2天</td>
             <td>2017.11.11</td>
             <td>
-                <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                <a class="detail" data-toggle="modal" data-target="#businessFor">详情</a>
             </td>
         </tr>
         <tr>
@@ -68,7 +68,7 @@
             <td>2天</td>
             <td>2017.12.11</td>
             <td>
-                <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                <a class="detail" data-toggle="modal" data-target="#businessFor">详情</a>
             </td>
         </tr>
         <tr>
@@ -80,10 +80,46 @@
             <td>2天</td>
             <td>2017.11.09</td>
             <td>
-                <a class="detail" data-toggle="modal" data-target="#">详情</a>
+                <a class="detail" data-toggle="modal" data-target="#businessFor">详情</a>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="pages"></div>
 </div>
+<!--出差 模态框-->
+<div class="modal fade businessFor" id="businessFor" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">添加成员</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled clearfix detailText adds">
+                    <!--<li class="approver">-->
+                        <!--<b>审&nbsp;&nbsp;批&nbsp;&nbsp;人</b>-->
+                        <!--<span></span>-->
+                    <!--</li>-->
+                    <!--<li class="copyTo">-->
+                        <!--<b>抄&nbsp;&nbsp;送&nbsp;&nbsp;人</b>-->
+                        <!--<span></span>-->
+                    <!--</li>-->
+                    <li class="address">
+                        <b>出差地址：</b>
+                        <span></span>
+                    </li>
+                    <li class="applyInfo">
+                        <b>出差事由：</b>
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+

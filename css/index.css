@@ -299,7 +299,6 @@ a{
     border-color: #d8d8d8;
 }
 .proDetails .detail .assigned ul{margin-top: 1.3rem;}
-.taskAssigned .modal-content{margin-top: 15rem;}
 .modal-header,.modal-footer{border: 0;}
 .taskAssigned .modal-body dl{
     margin-bottom: 0;
@@ -491,7 +490,16 @@ a{
     padding: 0 0.5rem;
     font-size: 0.83rem;
 }
-.modal .modal-header,.modal .modal-footer{border: 1px solid #e7e7e7;}
+.modal .modal-header{
+    background: #5f97f6;
+    color: #fff;
+    border: 0;
+}
+.close,.close:hover{
+    color: #fff;
+    opacity: 1;
+}
+.modal .modal-footer{border-top: 1px solid #e7e7e7;}
 .delete .modal-body ul{
     margin: 0;
     padding: 2.23rem 0 1.67rem;
@@ -505,4 +513,25 @@ a{
     background: url(../img/icon-delete.png) no-repeat center center;
     background-size: 100%;
 }
-
+.marTop17{margin-top: 17rem;}
+.modal .modal-body .ulText>li{
+    width: 50%;
+    float: left;
+    margin: 1rem 0;
+}
+.modal .modal-body .ulText>li:nth-child(even){
+   text-align: right;
+}
+.modal .modal-body .ulText>li span{
+   margin-right: 0.52rem;
+}
+.modal .modal-body .ulText>li input[type='text']{
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    border-radius: 2px;
+    padding: 2px 0;
+}
+.detailText>li{
+    margin: 1rem 0;
+}
+.detailText{padding-left: 4rem;}

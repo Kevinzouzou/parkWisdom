@@ -9,7 +9,6 @@ $("body").on('click',"#tab_serMg .table td .detail",function(){
     $("#tab_serMg .zTab").css("display","none");
     $("#tab_serMg .proDetails").css("display","block");
     var ids=$(this).parents("tr").attr("ids");
-    console.log(ids)
     $("#tab_serMg .proDetails .detail .toAssign .send").attr("ids",ids);
     var datas=$(this).parents("tr").attr("datas");
     datas=JSON.parse(datas);
@@ -104,7 +103,7 @@ $("body").on('click',"#tab_serMg .table td .send,#tab_serMg .proDetails .toAssig
     $("#taskAssigned .modal-footer").css("display","block");
     $.ajax({
         type: "get",
-        url: serIp + "/manage-services/propertyUser/propertyUserList?parkId="+parkId,
+        url: serIp + "/manage-services/parkUserPermission/parkUserList?parkId="+parkId+"&type=2",
         dataType: "json",
         success: function (data) {
             var lis="";

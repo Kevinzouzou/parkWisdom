@@ -26,11 +26,13 @@ function addressBookAjax(){
                 html+='<tr ids="'+checknull(item.id)+'"><td>'+checknull(item.contactPersonName)+'</td><td>'+
                     checknull(item.addInfo.position)+'</td><td>'+checknull(item.addInfo.department)+'</td><td>'+
                     checknull(item.contactCellPhoneNumber)+'</td><td>' +
-                    '<a class="transfer" data-toggle="modal" data-target="#">转移成员</a>' +
+                    '<a class="transfer" data-toggle="modal" data-target="#memTransfer">转移成员</a>' +
                     '<a class="delete" data-toggle="modal" data-target="#bookDelete">删除</a></td></tr>';
             });
             $("#tab_addressBook .tables tbody").html(html);
             addIds("#tab_addressBook","#bookDelete",".delete");
+            addIds("#tab_addressBook","#memTransfer",".determine");
+            tableForPages("#tab_addressBook",9);
         },
         error: function () {
             console.log("error！");
@@ -50,6 +52,55 @@ $("#bookDelete .delete").on('click',function(){
     $.ajax({
         type: "delete",
         url: serIp+"/manage-services/contacts/deleteContacts/"+ids,
+        dataType: "json",
+        success: function (data) {
+            addressBookAjax();
+        },
+        error: function () {
+            console.log("error！");
+        }
+    });
+});
+//通讯录 添加成员
+$("#memAdd .determine").on('click',function(){
+    var id="#memAdd";
+    var name=$(id+" .name input").val();
+    var position=$(id+" .position input").val();
+    var department=$(id+" .department input").val();
+    var phone=$(id+" .phone input").val();
+    var data={
+        "parkId":parkId,
+        "contactPersonName":name,
+        "contactCellPhoneNumber":phone,
+        "addInfo":{
+            "position":position,
+            "department":department
+        }
+    };
+    $.ajax({
+        type: "POST",
+        url: serIp+"/manage-services/contacts/addContacts",
+        data:JSON.stringify(data),
+        contentType: 'application/json',
+        dataType: "json",
+        success: function (data) {
+            addressBookAjax();
+        },
+        error: function () {
+            console.log("error！");
+        }
+    });
+});
+//通讯录 转移成员
+$("#memTransfer .determine").on('click',function(){
+    var id="#memTransfer";
+    var ids=$(this).attr("ids");
+    var position=$(id+" .position input").val();
+    var department=$(id+" .department input").val();
+    var data="parkId="+parkId+"&id="+ids+"&department="+department+"&position="+position;
+    $.ajax({
+        type: "GET",
+        url: serIp+"/manage-services/contacts/modifyDepartment?"+data,
         dataType: "json",
         success: function (data) {
             addressBookAjax();
