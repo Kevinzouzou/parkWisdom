@@ -77,40 +77,7 @@ function selectDropdownMenu(class1,class2){
     });
 }
 selectDropdownMenu(".dropdown-menu",".dropdown-toggle");
-function checkAllOrNot(id){
-    //复选框的全选、全不选事件
-    var checkAll=$(id+" .table th input[type='checkbox']");
-    checkAll.on('click',function(){
-        console.log(id)
-        if($(this).prop("checked")){
-            var checkItem=$(this).parent().parent().parent().parent().children("tbody").find("input[type='checkbox']");
-            checkItem.prop("checked",true);
-        }else{
-            var checkItem=$(this).parent().parent().parent().parent().children("tbody").find("input[type='checkbox']");
-            checkItem.prop("checked",false);
-        }
-    });
 
-//如果有一个没选中，则全选按钮不勾选
-    var checkItem=$(id+" table tr td input[type='checkbox']");
-    checkItem.on('click',function(){
-        console.log(checkItem)
-        for(var i=0;i<checkItem.length;i++){
-            if(!checkItem[i].checked){
-                var checkForAll=$(this).parent().parent().parent().parent().children("thead").find("input[type='checkbox']");
-                checkForAll.prop("checked",false);//全选自动取消
-                break;
-            }else{
-                var checkForAll=$(this).parent().parent().parent().parent().children("thead").find("input[type='checkbox']");
-                if(i==checkItem.length-1){
-                    checkForAll.prop("checked",true);//全选自动勾选
-                }
-            }
-        }
-    });
-}
-//通讯录
-checkAllOrNot("#tab_addressBook");
 //校验是否为空
 function checknull(str){
     if(str=='null'||str==null){

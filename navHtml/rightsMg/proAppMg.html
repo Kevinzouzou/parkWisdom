@@ -2,7 +2,7 @@
 <div class="lines firstTitle">
     <span class="title">物业App用户管理</span>
     <div class="pull-right">
-        <button class='btn btn-primary text-center'>新增</button>
+        <button class='btn btn-primary text-center adds' data-toggle="modal" data-target="#addAppUser">新增</button>
     </div>
 </div>
 <!--留白区域-->
@@ -30,6 +30,7 @@
             <td>
                 <a class="modify" data-toggle="modal" data-target="#">修改</a>
                 <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
         <tr>
@@ -41,6 +42,7 @@
             <td>
                 <a class="modify" data-toggle="modal" data-target="#">修改</a>
                 <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
         <tr>
@@ -52,9 +54,81 @@
             <td>
                 <a class="modify" data-toggle="modal" data-target="#">修改</a>
                 <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="pages"></div>
+</div>
+<!--新增App用户 模态框-->
+<div class="modal fade" id="addAppUser" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">添加成员</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled clearfix text-center ulText adds">
+                    <li class="name">
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                        <input type="text" placeholder="输入姓名"/>
+                    </li>
+                    <li class="position">
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</span>
+                        <input type="text" placeholder="输入添加的职位"/>
+                    </li>
+                    <li class="department">
+                        <span>部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门</span>
+                        <input type="text" placeholder="输入添加的部门"/>
+                    </li>
+                    <li class="phone">
+                        <span>手机号码</span>
+                        <input type="text" placeholder="输入手机号码"/>
+                    </li>
+                    <li class="password">
+                        <span>设置密码</span>
+                        <input type="text" placeholder="输入要设置的密码"/>
+                    </li>
+                    <li class="roles">
+                        <span>角色权限</span>
+                        <div class="dropdown roleAuthor">
+                            <a class="dropdown-toggle roleAuthorTitle" data-toggle="dropdown"><span>请选择</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu roleAuthor-menu" role="menu">
+                                <li><a>超级管理员</a></li>
+                                <li><a>管理员</a></li>
+                                <li><a>游客</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除 模态框-->
+<div class="modal fade delete" id="AppDelete" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">提示</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled text-center">
+                    <li></li>
+                    <li>确定删除该消息?</li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn delete" data-dismiss="modal">删除</button>
+            </div>
+        </div>
+    </div>
 </div>

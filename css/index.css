@@ -352,7 +352,7 @@ a{
     display: inline-block;
     margin-right: 0.67rem;
 }
-.taskAssigned .modal-body ul li .property{
+.taskAssigned .modal-body ul li .property,.modal-body .dropdown{
     display: inline-block;
     width: 13.54rem;
     height: 2.08rem;
@@ -361,7 +361,8 @@ a{
     border-radius: 2px;
     border: 1px solid #cbcbcb;
 }
-.taskAssigned .modal-body ul li .property a{
+.modal-body .dropdown{width: 10.65rem;}
+.taskAssigned .modal-body ul li .property a,.modal-body .dropdown a{
     color: #333;
     width: 100%;
     display: inline-block;
@@ -373,7 +374,7 @@ a{
     display: inline;
     font-weight: normal;
 }
-.taskAssigned .modal-body ul li .property .dropdown-menu{
+.taskAssigned .modal-body ul li .property .dropdown-menu,.modal-body .dropdown .dropdown-menu{
     margin: 2px 0 0;
     width: 100%;
     text-align: center;
@@ -381,10 +382,15 @@ a{
     border: 1px solid #cdcdcd;
     border-radius: 2px;
 }
-.taskAssigned .modal-body ul li .property .dropdown-menu li{
+.modal-body .dropdown .dropdown-menu{font-size: 0.83rem;}
+.taskAssigned .modal-body ul li .property .dropdown-menu li,
+.modal-body .dropdown-menu>li{
     margin: 0;
+    height: 1.56rem;
+    line-height: 1.56rem;
 }
-.taskAssigned .modal-body ul li .property .dropdown-menu li:hover a{
+.taskAssigned .modal-body ul li .property .dropdown-menu li:hover a,
+.modal-body .dropdown-menu li:hover a{
     color: #fff;
     background: #5F97F6;
 }
@@ -530,6 +536,8 @@ a{
     border: 1px solid #cbcbcb;
     border-radius: 2px;
     padding: 2px 0;
+    height: 2.08rem;
+    line-height: 2.08rem;
 }
 .detailText>li{
     margin: 1rem 0;

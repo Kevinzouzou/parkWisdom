@@ -90,6 +90,7 @@ $("#memAdd .determine").on('click',function(){
             console.log("error！");
         }
     });
+    $(id+" input").val("");
 });
 //通讯录 转移成员
 $("#memTransfer .determine").on('click',function(){
