@@ -29,8 +29,8 @@
                 <td>13123566566</td>
                 <td>超级管理员</td>
                 <td>
-                    <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                    <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                    <a class="modify" data-toggle="modal" data-target="#modifyUser">修改</a>
+                    <a class="forbidden" data-toggle="modal" data-target="#changeState">禁用</a>
                     <a class="delete" data-toggle="modal" data-target="#operaMgDelete">删除</a>
                 </td>
             </tr>
@@ -41,8 +41,8 @@
                 <td>13128886566</td>
                 <td>信息管理</td>
                 <td>
-                    <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                    <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                    <a class="modify" data-toggle="modal" data-target="#modifyUser">修改</a>
+                    <a class="forbidden" data-toggle="modal" data-target="#changeState">禁用</a>
                     <a class="delete" data-toggle="modal" data-target="#operaMgDelete">删除</a>
                 </td>
             </tr>
@@ -53,8 +53,8 @@
                 <td>13563566233</td>
                 <td>权限管理</td>
                 <td>
-                    <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                    <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                    <a class="modify" data-toggle="modal" data-target="#modifyUser">修改</a>
+                    <a class="forbidden" data-toggle="modal" data-target="#changeState">禁用</a>
                     <a class="delete" data-toggle="modal" data-target="#operaMgDelete">删除</a>
                 </td>
             </tr>
@@ -123,6 +123,61 @@
                                 <li><a>游客</a></li>
                             </ul>
                         </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改状态 模态框-->
+<div class="modal fade changeState" id="changeState" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">提示</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled text-center">
+                    <li>确定修改该状态?</li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改 模态框-->
+<div class="modal fade" id="modifyUser" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">修改成员</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled clearfix text-center ulText adds">
+                    <li class="name">
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                        <input type="text" placeholder="输入姓名"/>
+                    </li>
+                    <li class="position">
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</span>
+                        <input type="text" placeholder="输入添加的职位"/>
+                    </li>
+                    <li class="department">
+                        <span>部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门</span>
+                        <input type="text" placeholder="输入添加的部门"/>
+                    </li>
+                    <li class="phone">
+                        <span>手机号码</span>
+                        <input type="text" placeholder="输入手机号码"/>
                     </li>
                 </ul>
             </div>

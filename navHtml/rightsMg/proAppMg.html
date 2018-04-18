@@ -28,8 +28,8 @@
             <td>13123566566</td>
             <td>物业APP用户</td>
             <td>
-                <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="modify" data-toggle="modal" data-target="#modifyAppUser">修改</a>
+                <a class="forbidden" data-toggle="modal" data-target="#changeAppState">禁用</a>
                 <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
@@ -40,8 +40,8 @@
             <td>13128886566</td>
             <td>物业APP用户</td>
             <td>
-                <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="modify" data-toggle="modal" data-target="#modifyAppUser">修改</a>
+                <a class="forbidden" data-toggle="modal" data-target="#changeAppState">禁用</a>
                 <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
@@ -52,8 +52,8 @@
             <td>13563566233</td>
             <td>物业APP用户</td>
             <td>
-                <a class="modify" data-toggle="modal" data-target="#">修改</a>
-                <a class="forbidden" data-toggle="modal" data-target="#">禁用</a>
+                <a class="modify" data-toggle="modal" data-target="#modifyAppUser">修改</a>
+                <a class="forbidden" data-toggle="modal" data-target="#changeAppState">禁用</a>
                 <a class="delete" data-toggle="modal" data-target="#AppDelete">删除</a>
             </td>
         </tr>
@@ -128,6 +128,61 @@
             <div class="modal-footer text-center">
                 <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
                 <button type="button" class="btn delete" data-dismiss="modal">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改状态 模态框-->
+<div class="modal fade changeState" id="changeAppState" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">提示</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled text-center">
+                    <li>确定修改该状态?</li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn to_cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改 模态框-->
+<div class="modal fade" id="modifyAppUser" aria-hidden="true">
+    <div class="modal-dialog marTop17">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title text-center">修改成员</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled clearfix text-center ulText adds">
+                    <li class="name">
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                        <input type="text" placeholder="输入姓名"/>
+                    </li>
+                    <li class="position">
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位</span>
+                        <input type="text" placeholder="输入添加的职位"/>
+                    </li>
+                    <li class="department">
+                        <span>部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门</span>
+                        <input type="text" placeholder="输入添加的部门"/>
+                    </li>
+                    <li class="phone">
+                        <span>手机号码</span>
+                        <input type="text" placeholder="输入手机号码"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn cancel" data-dismiss="modal">取消</button>
+                <button type="button" class="btn determine" data-dismiss="modal">确定</button>
             </div>
         </div>
     </div>

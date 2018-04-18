@@ -152,7 +152,7 @@ a{
     line-height: 2.08rem;
     padding: 1px 0.94rem;
     width: 13.54rem;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #cbcbcb;
 }
 .lines .btn{
     height: 2.08rem;
@@ -180,7 +180,7 @@ a{
 .firstTitle .dropdown{
     display: inline-block;
     margin: 0 0.52rem;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #cbcbcb;
     height: 2.08rem;
     line-height: 2.08rem;
     border-radius: 2px;
@@ -201,7 +201,7 @@ a{
     width: 100%;
     min-width: 7.81rem;
     padding: 0;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #cbcbcb;
     border-radius: 2px;
 }
 .firstTitle .dropdown>ul li:hover a{
@@ -379,7 +379,7 @@ a{
     width: 100%;
     text-align: center;
     padding: 0;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #cbcbcb;
     border-radius: 2px;
 }
 .modal-body .dropdown .dropdown-menu{font-size: 0.83rem;}
@@ -489,7 +489,6 @@ a{
     text-align: center;
     border: 1px solid #cbcbcb;
 }
-
 .pages .pagination-detail button{
     height: 1.56rem;
     line-height: 1.56rem;
@@ -506,7 +505,7 @@ a{
     opacity: 1;
 }
 .modal .modal-footer{border-top: 1px solid #e7e7e7;}
-.delete .modal-body ul{
+.delete .modal-body ul,.changeState .modal-body ul{
     margin: 0;
     padding: 2.23rem 0 1.67rem;
     font-size: 0.94rem;

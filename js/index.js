@@ -10,9 +10,9 @@ var secHeight=screenHeight-headerHeight+"px";
 $(".left_aside").css("height",secHeight);
 $(".right_aside").css("height",secHeight);
 //一级菜单、二级菜单选中添加class
-$(".left_aside .nav_tab li").on('click',function(){
+$(".left_aside .nav_tab li>a").on('click',function(){
     $('#all_paging').css('display','none');
-    $(this).addClass("active").siblings().removeClass("active");
+    $(this).parent("li").addClass("active").siblings().removeClass("active");
 });
 //一级菜单，有二级菜单下跳转到指定内容项
 $(".left_aside>.nav_tab>li").on('click',function(){
@@ -21,15 +21,21 @@ $(".left_aside>.nav_tab>li").on('click',function(){
     var index=$(this).index();
     $(".right_aside>.tab-content>div").eq(index).addClass("active").siblings().removeClass("active");
     $(this).siblings("li").children("ul").removeClass("in");
-    if($(this).children("ul").hasClass("in")){
-        $(this).children("a").find("span.pull-right").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
-    }else{
-        $(".left_aside>.nav_tab>li span.pull-right").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
-        $(this).children("a").find("span.pull-right").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+    if(!$(this).children("ul").hasClass("in")){
         $(this).children("ul").children("li:first-child").addClass("active");
         $(".right_aside>.tab-content>div").eq(index).children("div.tab-content").children("div:first-child").addClass("active").siblings().removeClass("active");
     }
 });
+$(".left_aside>.nav_tab>li>a").on('click',function(){
+    var index=$(this).parent("li").index();
+    if($(this).siblings("ul").hasClass("in")){
+        $(this).children("span.pull-right").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+    }else{
+        $(".left_aside>.nav_tab>li span.pull-right").removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+        $(this).children("span.pull-right").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+    }
+});
+
 $(".tablist_third>ul>li").on('click', function () {
     $('#all_paging').css('display','none');
 });
