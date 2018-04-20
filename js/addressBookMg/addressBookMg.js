@@ -32,7 +32,7 @@ function addressBookAjax(){
             $("#tab_addressBook .tables tbody").html(html);
             addIds("#tab_addressBook","#bookDelete",".delete");
             addIds("#tab_addressBook","#memTransfer",".determine");
-            tableForPages("#tab_addressBook",9);
+            tableForPages("#tab_addressBook",8);
         },
         error: function () {
             console.log("error！");
