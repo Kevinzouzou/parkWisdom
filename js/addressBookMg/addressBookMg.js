@@ -15,7 +15,7 @@ function addressBookTable(){
     addressBookAjax();
 }
 function addressBookAjax(){
-    var url="/manage-services/contacts/contactsList/"+parkId;
+    var url="/contacts/contactsList/"+parkId;
     $.ajax({
         type: "get",
         url: serIp+url,
@@ -51,7 +51,7 @@ $("#bookDelete .delete").on('click',function(){
     var ids=$(this).attr("ids");
     $.ajax({
         type: "delete",
-        url: serIp+"/manage-services/contacts/deleteContacts/"+ids,
+        url: serIp+"/contacts/deleteContacts/"+ids,
         dataType: "json",
         success: function (data) {
             addressBookAjax();
@@ -79,7 +79,7 @@ $("#memAdd .determine").on('click',function(){
     };
     $.ajax({
         type: "POST",
-        url: serIp+"/manage-services/contacts/addContacts",
+        url: serIp+"/contacts/addContacts",
         data:JSON.stringify(data),
         contentType: 'application/json',
         dataType: "json",
@@ -101,7 +101,7 @@ $("#memTransfer .determine").on('click',function(){
     var data="parkId="+parkId+"&id="+ids+"&department="+department+"&position="+position;
     $.ajax({
         type: "GET",
-        url: serIp+"/manage-services/contacts/modifyDepartment?"+data,
+        url: serIp+"/contacts/modifyDepartment?"+data,
         dataType: "json",
         success: function (data) {
             addressBookAjax();

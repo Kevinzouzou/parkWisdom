@@ -52,7 +52,7 @@ function changeState(id,changeId,fnName){
         var ids=$(this).attr("ids");
         $.ajax({
             type: "put",
-            url: serIp+"/manage-services/parkUserPermission/modifyParkUserState?id="+ids+"&state="+state,
+            url: serIp+"/parkUserPermission/modifyParkUserState?id="+ids+"&state="+state,
             dataType: "json",
             success: function (data) {
                 if(data!==null){
@@ -73,7 +73,7 @@ function userDelete(deleteId,fnName){
         var ids=$(this).attr("ids");
         $.ajax({
             type: "delete",
-            url: serIp+"/manage-services/parkUserPermission/deleteUser/"+ids,
+            url: serIp+"/parkUserPermission/deleteUser/"+ids,
             dataType: "json",
             success: function (data) {
                 if(data!==null){
@@ -116,7 +116,7 @@ function addUser(id,type,fnName){
         };
         $.ajax({
             type: "POST",
-            url: serIp+"/manage-services/parkUserPermission/addParkUser",
+            url: serIp+"/parkUserPermission/addParkUser",
             data:JSON.stringify(data),
             contentType: 'application/json',
             //dataType: "json",
@@ -141,7 +141,7 @@ function searchRole(btnId,menuId){
     $("body").on('click',btnId,function(){
         $.ajax({
             type: "get",
-            url: serIp + "/manage-services/parkUserPermission/parkRoleList?parkId="+parkId,
+            url: serIp + "/parkUserPermission/parkRoleList?parkId="+parkId,
             dataType: "json",
             success: function (data) {
                 var lis="";
@@ -166,7 +166,7 @@ function modifyRights(modifyId,fnName){
         var phone=$(modifyId+" .phone input").val();
         $.ajax({
             type: "put",
-            url: serIp+"/manage-services/parkUserPermission/modifyParkUserInfo?id="+ids+"&nickName="+name+
+            url: serIp+"/parkUserPermission/modifyParkUserInfo?id="+ids+"&nickName="+name+
             "&phone="+phone+"&department="+department+"&position="+position,
             dataType: "json",
             success: function (data) {
@@ -186,7 +186,7 @@ function modifyRights(modifyId,fnName){
 function rightsOperaMgTableUrl(id,type,deleteId,changeId,modifyId){
     $.ajax({
         type: "get",
-        url: serIp+"/manage-services/parkUserPermission/parkUserList?parkId="+parkId+"&type="+type,
+        url: serIp+"/parkUserPermission/parkUserList?parkId="+parkId+"&type="+type,
         dataType: "json",
         success: function (data) {
             var html="";

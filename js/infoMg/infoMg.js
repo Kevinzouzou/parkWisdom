@@ -13,7 +13,7 @@ function clockInfoTable(){
     clockInfoAjax(data);
 }
 function clockInfoAjax(data){
-    var url="/manage-services/message/userSignList?";
+    var url="/message/userSignList?";
     $.ajax({
         type: "get",
         url: serIp+url+data,
@@ -69,7 +69,7 @@ function askingForTable(){
     askingForAjax(data);
 }
 function askingForAjax(data){
-    var url="/manage-services/message/approvalInfoList?";
+    var url="/message/approvalInfoList?";
     $.ajax({
         type: "get",
         url: serIp+url+data,
@@ -83,7 +83,7 @@ function askingForAjax(data){
                   leaveType:item.addInfo.leaveType,
                   applyInfo:item.addInfo.applyInfo
                 };
-                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
+                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.parkUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
                     '<td>'+checknull(item.addInfo.leaveType)+'</td><td>'+checknull(item.startTime)+'</td>' +
                     '<td>'+checknull(item.endTime)+'</td><td>'+checknull(item.duration)+'</td><td>'+checknull(item.time)+'</td>' +
                     '<td><a class="detail" data-toggle="modal" data-target="#askingFor">详情</a></td></tr>';
@@ -140,7 +140,7 @@ function businessInfoTable(){
     businessInfoAjax(data);
 }
 function businessInfoAjax(data){
-    var url="/manage-services/message/approvalInfoList?";
+    var url="/message/approvalInfoList?";
     $.ajax({
         type: "get",
         url: serIp+url+data,
@@ -154,7 +154,7 @@ function businessInfoAjax(data){
                     applyInfo:item.addInfo.applyInfo,
                     address:item.addInfo.address
                 };
-                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.propertyUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
+                html+='<tr datas=\''+JSON.stringify(datas)+'\'><td>'+checknull(item.addInfo.parkUserName)+'</td><td>'+checknull(item.addInfo.position)+'</td>' +
                     '<td>'+checknull(item.addInfo.address)+'</td><td>'+checknull(item.startTime)+'</td>' +
                     '<td>'+checknull(item.endTime)+'</td><td>'+checknull(item.duration)+'</td><td>'+checknull(item.time)+'</td>' +
                     '<td><a class="detail" data-toggle="modal" data-target="#businessFor">详情</a></td></tr>';

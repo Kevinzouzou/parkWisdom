@@ -427,7 +427,11 @@ a{
     padding: 1.77rem 0.52rem 0.26rem 2.83rem;
     border-right: 1px solid #e3e3e3;
 }
-.ztree li a{height: 1.72rem;}
+.ztree li a, .ztree li a.curSelectedNode{
+    height: 1.72rem;
+    background: #fff;
+    border: 1px solid transparent;
+}
 .ztree *{font-size: 0.93rem;}
 /*.ztree li span.button{width: 0;}*/
 .addressTables{width: 80%;}

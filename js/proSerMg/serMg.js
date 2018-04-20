@@ -61,7 +61,7 @@ $("body").on('click',"#taskAssigned .modal-footer .determine",function(){
             "&position="+datas.position;
         $.ajax({
             type: "get",
-            url: serIp + "/manage-services/property/taskAssignments?"+senddata,
+            url: serIp + "/property/taskAssignments?"+senddata,
             dataType: "json",
             success: function (data) {
                 $("#taskAssigned .modal-body dl").css("display","block");
@@ -103,7 +103,7 @@ $("body").on('click',"#tab_serMg .table td .send,#tab_serMg .proDetails .toAssig
     $("#taskAssigned .modal-footer").css("display","block");
     $.ajax({
         type: "get",
-        url: serIp + "/manage-services/parkUserPermission/parkUserList?parkId="+parkId+"&type=2",
+        url: serIp + "/parkUserPermission/parkUserList?parkId="+parkId+"&type=2",
         dataType: "json",
         success: function (data) {
             var lis="";
@@ -139,7 +139,7 @@ $("body").on("click",".proSerMg .serMg",function(){
 });
 serMgTable();
 function serMgTable(){
-    var url="/manage-services/property/propertyApplicationList/8969878f1f1149e6a7afae38636c0abc&";
+    var url="/property/propertyApplicationList/8969878f1f1149e6a7afae38636c0abc&";
     serMgTableUrl(url);
 }
 //根据路径查询报修详情
@@ -195,7 +195,7 @@ $("body").on("click","#tab_serMg .zTab .lines .search",function(){
     if(value==""){
         serMgTable();
     }else{
-        var url="/manage-services/property/propertyApplicationList/8969878f1f1149e6a7afae38636c0abc&"+value;
+        var url="/property/propertyApplicationList/8969878f1f1149e6a7afae38636c0abc&"+value;
         serMgTableUrl(url);
     }
 
